@@ -1,5 +1,5 @@
 {
-  "name": "DO IT!",
+  "name": "Test PPP",
   "version": "1.0.1",
   "manifest_version": 2,
   "description": "For when you need motivation! Shia LaBeouf delivers the most intense motivational speech of all-time IN YOUR BROWSER! ",
@@ -13,10 +13,16 @@
     "activeTab",
     "tabs", "<all_urls>"
   ],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
+  // "background": {
+  //   "scripts": ["background.js"],
+  //   "persistent": false
+  // },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["jquery-1.11.1.min.js", "background.js"]
+    }
+  ],
   "browser_action": {
      "default_icon": {
         "19": "icons/icon19.png",

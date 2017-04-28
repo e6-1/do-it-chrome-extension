@@ -7,7 +7,7 @@ if (videoEl == null) {
 	div.innerHTML = '<div class="shia-do-it--container" style="width: 720px; overflow:hidden; display:block; height: 535px;"><video width="960" height="540" style="margin-top: -5px; max-width: none; padding: 0;" name="media"><source type="video/webm"></video></div>';
 	var video = document.querySelector('.shia-do-it .shia-do-it--container video');
 	video.style.visibility = "hidden";
-	video.src = chrome.extension.getURL("/media/output.webm");
+	video.src = chrome.extension.getURL("/media/ppp_short.webm");
 	video.load();
 	video.addEventListener('loadeddata', function() {
 	   video.style.visibility = "visible";
